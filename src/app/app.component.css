@@ -1,0 +1,142 @@
+.header {
+  background-color: #03A9F4;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-family: Roboto, sans-serif;
+  font-size: 24px;
+  margin: 0;
+}
+
+.search-input {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+   direction: rtl;
+}
+
+.search-input input {
+  border: none;
+  padding: 10px;
+  width: calc(100% - 40px);
+  font-size: medium;
+}
+
+.search-input mat-icon {
+  font-size: 24px;
+  color: #03A9F4;
+}
+
+.contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+  direction: rtl;
+}
+
+.contact-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 0px !important;
+  padding: 10px;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  margin-top: 3px !important;
+  width: 100%; /* changed from 33.33% to 100% - 40px */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.contact-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-info {
+  padding: 10px;
+}
+
+.contact-info h2 {
+  font-size: 28px;
+  margin-bottom: 0px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  color: #666;
+}
+
+.contact-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-actions {
+  display: flex;
+  align-items: center;
+}
+
+.contact-actions mat-icon {
+  margin-left: 5px;
+}
+
+.contact-phone-numbers {
+  margin-bottom: 10px;
+}
+
+.phone-number {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.contact-actions mat-icon {
+  color: #666; /* use a lighter or darker shade of the primary color */
+  margin-left: 5px;
+}
+
+.phone-number mat-icon {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.whatsapp-icon, .font-icons{
+  font-size: xx-large;
+  margin-right: 6px;
+  margin-left: 6px;
+}
+.font-icons{
+  color: #666;;
+}
+.whatsapp-icon{
+  color: green;
+}
+.phone{
+  font-size: x-large;
+}
+.floating-message {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #666;
+}

@@ -1,0 +1,33 @@
+<div class="header">
+  <h1> ספר טלפונים - מזרע</h1>
+</div>
+<div class="search-input">
+  <input type="text" [(ngModel)]="searchText" placeholder="חיפוש אנשי קשר...">
+  <mat-icon>search</mat-icon>
+</div>
+<div class="contact-list">
+  <div *ngFor="let contact of searchContacts()" class="contact-card">
+    <div class="contact-info">
+      <div class="contact-header">
+        <h2>{{ contact.name }}</h2>
+        <div class="contact-actions">
+          <a href="mailto::{{ contact.email }}"><mat-icon>mail</mat-icon></a>
+          <mat-icon>share</mat-icon>
+        </div>
+      </div>
+      <div class="contact-phone-numbers">
+        <div class="phone-number contact-header" *ngIf="contact.mobile">
+          <a class="phone" href="tel:{{ contact.mobile }}">{{ contact.mobile }}</a>
+
+          <div class="contact-actions">
+            <a href="{{'https://wa.me/972'+contact.mobile}}" class="whatsapp-a"><span class='whatsapp-icon fa fa-whatsapp'></span></a>
+            <span (click)="copyToClipboard(contact.mobile)" class='font-icons fa fa-copy'></span>
+          </div>
+        </div>
+        <div class="phone-number" *ngIf="contact.phone">
+          <a class="phone" href="tel:{{ contact.phone }}">{{ contact.phone }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

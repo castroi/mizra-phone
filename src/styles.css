@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+*/
+
+
+.contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .contact-card {
+    margin: 20px;
+  }
+  
+  mat-card {
+    width: 100%;
+    margin: 0 20px;
+  }
+  
+  mat-card-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  mat-card-subtitle {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  mat-card-content {
+    padding: 20px;
+  }
+  
+  mat-card-actions {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+  }
+  
+  mat-icon-button {
+    margin: 0 10px;
+  }
