@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, OnInit } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatList, MatListModule } from '@angular/material/list';
@@ -44,18 +44,12 @@ export class AppComponent implements OnInit {
   message = 'Password changed!';
   timeoutId: any;
 
-  constructor(private airtable: AirtableService,private clipboardService: ClipboardService, private elementRef: ElementRef) { }
+  constructor(private airtable: AirtableService,private clipboardService: ClipboardService) { }
 
   ngOnInit(): void {
     this.contacts = this.airtable.getContacts();
   }
 
-  ngAfterViewInit() {
-    this.elementRef.nativeElement.style.display = 'block';
-    this.timeoutId = setTimeout(() => {
-      this.elementRef.nativeElement.style.display = 'none';
-    }, 5000);
-  }
 
   ngOnDestroy() {
     clearTimeout(this.timeoutId);
@@ -80,9 +74,5 @@ export class AppComponent implements OnInit {
 
   copyToClipboard(text : string){
     this.clipboardService.copyFromContent(text);
-    this.elementRef.nativeElement.style.display = 'block';
-    this.timeoutId = setTimeout(() => {
-      this.elementRef.nativeElement.style.display = 'none';
-    }, 5000);
   }
 }

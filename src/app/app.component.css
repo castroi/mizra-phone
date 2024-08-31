@@ -1,13 +1,14 @@
 .header {
-  background-color: #03A9F4;
+  background: linear-gradient(to bottom, #6699ff 0%, #000066 100%);
   color: #fff;
   padding: 20px;
   text-align: center;
+  font-family:'VarelaRound-Regular', sans-serif;
 }
 
 .header h1 {
-  font-family: Roboto, sans-serif;
-  font-size: 24px;
+  font-size: 36px;
+  font-family:'VarelaRound-Regular', sans-serif;
   margin: 0;
 }
 
@@ -15,6 +16,7 @@
   background-color: #fff;
   border: 1px solid #ddd;
   padding: 10px;
+  font-family:'VarelaRound-Regular', sans-serif;
   display: flex;
   align-items: center;
    direction: rtl;
@@ -25,6 +27,7 @@
   padding: 10px;
   width: calc(100% - 40px);
   font-size: medium;
+  font-family:'VarelaRound-Regular', sans-serif;
 }
 
 .search-input mat-icon {
@@ -42,6 +45,7 @@
 }
 
 .contact-card {
+  font-family:'VarelaRound-Regular', sans-serif;
   background-color: #fff;
   border: 1px solid #ddd;
   margin-bottom: 0px !important;
@@ -74,6 +78,7 @@
 .contact-info h2 {
   font-size: 28px;
   margin-bottom: 0px;
+  font-family:'VarelaRound-Regular', sans-serif;
 }
 
 .contact-info p {
