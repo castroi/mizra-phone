@@ -11,5 +11,9 @@
   ],
   "include": [
     "src/**/*.d.ts"
-  ]
+  ],
+  "watchOptions": {
+    "excludeDirectories": ["node_modules"],
+    "excludeFiles": ["**/.git/*", "**/.angular/*", "**/dist/*"]
+  }
 }
