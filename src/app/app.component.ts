@@ -16,6 +16,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AirtableService } from '../airtable.service';
 import { ClipboardModule, ClipboardService } from 'ngx-clipboard';
+import { PopupService } from './popup/popup.service';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -44,7 +45,8 @@ export class AppComponent implements OnInit {
   message = 'Password changed!';
   timeoutId: any;
 
-  constructor(private airtable: AirtableService,private clipboardService: ClipboardService) { }
+  constructor(private airtable: AirtableService,private clipboardService: ClipboardService, 
+    private popupService : PopupService) { }
 
   ngOnInit(): void {
     this.contacts = this.airtable.getContacts();
@@ -72,7 +74,12 @@ export class AppComponent implements OnInit {
     console.log(`Sharing ${contact.name} contact information`);
   }
 
+  
+  makeCall(text : string) {
+    window.open(`tel:${text}`, '_self');
+  }
   copyToClipboard(text : string){
     this.clipboardService.copyFromContent(text);
+    this.popupService.openPopup();
   }
 }

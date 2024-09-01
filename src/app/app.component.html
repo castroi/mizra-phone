@@ -13,7 +13,7 @@
       </div>
       <div class="contact-phone-numbers">
         <div class="phone-number contact-header" *ngIf="contact.mobile">
-          <a class="phone" href="tel:{{ contact.mobile }}">{{ contact.mobile }}</a>
+          <a class="phone" (click)="makeCall(contact.mobile)">{{ contact.mobile }}</a>
 
           <div class="contact-actions">
             <a href="{{'https://wa.me/972'+contact.mobile}}" class="whatsapp-a"><span class='whatsapp-icon fa fa-whatsapp'></span></a>
